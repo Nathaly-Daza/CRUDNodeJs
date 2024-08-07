@@ -19,6 +19,14 @@
                             <label for="age" class="input-group-text">Edad</label>
                             <input class="form-control" type="number" name="age" id="age" placeholder="0" required>
                         </div>
+                        <div class="input-group mt-2">
+                            <label for="tipo_persona" class="input-group-text">Tipo de Persona</label>
+                            <select class="form-control" name="tipo_persona_id" id="tipo_persona" required>
+                                {{#each tipos_persona}}
+                                    <option value="{{this.id}}">{{this.tipo}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
                         <div class="form-group mt-4 d-grid gap-2">
                             <button class="btn btn-primary">Crear</button>
                         </div>
